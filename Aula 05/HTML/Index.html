@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Viewport" content="Width=Device-width, initial-scale=1.0">
+        <title>Brincando com o DOM</title>
+        <link rel="stylesheet" href="../CSS/Style.CSS">
+    </head>
+    <body>
+        <Div id="a" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            <p>Interaja</p>
+        </Div>
+        <script>
+            var b = window.document.getElementById ('a')
+            function clicar() {
+                b.style.transition = '0.8s'
+                window.document.body.style.background = 'var(--cor01)'
+                b.innerText = "Clicou"
+                b.style.background = 'var(--cor05)'
+                b.style.boxShadow = '2px 2px 3px 2px var(--cor05)'
+                b.style.color = 'var(--cor01)'
+                b.style.borderRadius = '50%'
+                b.style.width = '60vw'
+                b.style.height = '60vh'
+                b.style.lineHeight = '60vh'
+            } 
+            function entrar() {
+                b.style.transition = '0.8s'
+                window.document.body.style.background = 'var(--cor02)'
+                b.innerText = "Entrou"
+                b.style.background = 'var(--cor03)'
+                b.style.boxShadow = '2px 2px 3px 2px var(--cor03)'
+                b.style.color = 'var(--cor02)'
+                b.style.borderRadius = '50%'
+                b.style.width = '60vw'
+                b.style.height = '60vh'
+                b.style.lineHeight = '60vh'
+            }
+            function sair() {
+                b.style.transition = '0.8s'
+                window.document.body.style.background = 'var(--cor05)'
+                b.innerText = "Saiu"
+                b.style.background = 'var(--cor02)'
+                b.style.boxShadow = '2px 2px 3px 2px var(--cor02)'
+                b.style.color = 'var(--cor05)'
+                b.style.borderRadius = '20px'
+                b.style.width = '40vw'
+                b.style.height = '40vh'
+                b.style.lineHeight = '40vh'
+            }
+        </script>
+    </body>
+</html>

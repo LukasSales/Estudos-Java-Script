@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Segunda tentativa</title>
+        <link rel="stylesheet" href="../CSS/Style.CSS">
+    </head>
+    <body>
+        <div id="a">
+            <p>Interaja</p>
+        </div>
+        <script>
+            var a = window.document.getElementById ('a') 
+            a.addEventListener ('click', clicou)
+            a.addEventListener ('mouseenter', entrou)
+            a.addEventListener ('mouseout', saiu)
+
+            function clicou() {
+                window.document.body.style.background = 'var(--cor03)'
+                a.style.transition = '0.9s'
+                a.style.background = 'var(--cor01)'
+                a.style.boxShadow = ' 2px 2px 3px 2px var(--cor05)'
+                a.innerText = 'Clicou'
+                a.style.borderRadius = '45%'
+                a.style.color = 'var(--cor05)'
+            }
+            function entrou() {
+                window.document.body.style.background = 'var(--cor01)'
+                a.style.transition = '0.9s'
+                a.style.background = 'var(--cor05)'
+                a.style.boxShadow = ' 2px 2px 3px 2px var(--cor02)'
+                a.innerText = 'Entrou'
+                a.style.borderRadius = '45%'
+                a.style.color = 'var(--cor02)'
+            }
+            function saiu() {
+                window.document.body.style.background = 'var(--cor05)'
+                a.style.transition = '0.9s'
+                a.style.background = 'var(--cor01)'
+                a.style.boxShadow = ' 2px 2px 3px 2px var(--cor03)'
+                a.innerText = 'Saiu'
+                a.style.borderRadius = '45%'
+                a.style.color = 'var(--cor03)'
+            }
+        </script>
+    </body>
+</html>

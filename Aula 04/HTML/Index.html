@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Viewport" content="Width=Device-width, initial-scale=1.0">
+        <title>Aprendendo a utilizar DOM no JS</title>
+        <link rel="stylesheet" href="../CSS/style.CSS">
+    </head>
+    <body>
+        <h1>Aprendendo a utilizar o DOM</h1>
+        <p id="a">Aqui vai o resultado</p>
+        <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+        <div id="msg">Clique em mim</div>
+        <script>
+            window.document.write(window.document.charset)
+            document.write (window.document.URL)
+            var corpo = window.document.body
+            corpo.style.textAlign = 'center'
+            corpo.style.color = 'black'
+            corpo.style.fontWeight = 'bold'
+            var p1 = window.document.getElementsByTagName('h1')[0]
+            window.document.write(`<br> Esta escrito assim: ${p1.innerText}`)
+            p1.style.color = 'black'
+            window.alert (p1.innerHTML) //o innerHTML leva as filhas dessa string
+            var d = window.document.getElementById ('msg')
+            msg.style.background = 'white'
+            d.innerHTML = 'Estou Aguardando... '
+            var a = window.document.querySelector ('div#tex')
+            a.style.color = 'blue'
+        </script>
+    </body>
+</html>
