@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" name="IE=edge">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <title>Brincando com condicionais</title>
+        <link rel="stylesheet" href="../CSS/style.CSS">
+    </head>
+    <body>
+        <h1>Sistema de Multas</h1>
+        Velocidade do carro: <input type="number" name="texvel" id="textvel">
+        <input type="button" value="Verificar" onclick="ver ()">
+        <div id="res">
+
+        </div>
+
+        <div id="res2">
+
+        </div>
+        <script>
+            function ver(){
+                var texvel = window.document.getElementById('textvel')
+                var res = window.document.querySelector ('div#res')
+                var res2 = window.document.querySelector('div#res2')
+                var vel = Number(texvel.value)
+                res.innerHTML = `<br> Sua velocidade atual é de ${vel}Km/h`
+                res.innerHTML += '<br> Dirija sempre com cinto de segurança!'
+                if (vel<60) {
+                res2.innerHTML = (`Sua velocidade de ${vel}Km/h esta dentro do permitido`)
+                } else {
+                res2.innerHTML = (`Sua velocidade de ${vel}Km/h está acima da velocidade permitida de ${vmax}. Multado!`)
+                }
+                }
+        </script>
+    </body>
+</html>

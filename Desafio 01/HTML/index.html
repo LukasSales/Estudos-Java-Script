@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <title>Desafio de condição</title>
+        <link rel="stylesheet" href="../CSS/style.CSS">
+    </head>
+    <body>
+        <div id="corpo1">
+            <h1>One Piece</h1>
+            <h2>Qual a cena mais triste?</h2>
+            <div id="opc">
+                <input id="clicou1" type="button" value="Death of Going Merry">
+                <input onmouseenter="entrou2()" onmouseout="saiu2()" onclick="clicou2()" class="clicou2" type="button" value="Death of Ace">
+            </div>
+        </div>
+        <script>
+            var gm = window.document.querySelector ('input#clicou1')
+
+            var ac = window.document.querySelector ('input.clicou2')
+
+            gm.addEventListener ('mouseenter', entrou)
+
+            gm.addEventListener ('mouseout', saiu)
+
+            gm.addEventListener ('click', clicou1)
+
+            function entrou () {
+                gm.style.transition = '0.9s'
+                gm.style.background = 'var(--cor01)'
+                gm.style.fontSize = '3.5vw'
+                gm.style.color = 'var(--cor02)'
+            }
+            
+            function saiu () {
+                gm.style.transition = '0.9s'
+                gm.style.backgroundColor = 'var(--cor04)'
+                gm.style.fontSize = '15px'
+                gm.style.color = 'var(--cor03)'
+            }
+
+            function entrou2() {
+                ac.style.transition = '0.9s'
+                ac.style.background = 'var(--cor01)'
+                ac.style.fontSize = '3.5vw'
+                ac.style.color = 'var(--cor02)'
+            }
+
+            function saiu2() {
+                ac.style.transition = '0.9s'
+                ac.style.backgroundColor = 'var(--cor04)'
+                ac.style.fontSize = '15px'
+                ac.style.color = 'var(--cor03)'
+            }
+
+            function clicou1() {
+                    window.document.body.style.backgroundColor = ('black') 
+                    h1.innerHTML = 'Pow irmão tbm acho isso'
+            }
+
+            function clicou2() {
+                if ('ac') {
+                        window.document.body.style.backgroundColor = ('var(--cor05)')
+                        ac.innerHTML = 'Pow irmão tbm acho isso'
+                    }
+            }
+        </script>
+    </body>
+</html>
+    
