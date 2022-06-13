@@ -44,9 +44,10 @@
 
             function clicou () {
                 var text2 = window.document.querySelector ('input#text2')
+                var country = String(text2.value)
                 var resp = window.document.querySelector ('div#resp')
 
-                if (text2.value == 'brasil', 'Brasil', 'br', 'BR') {
+                if (country == 'Brasil' || country == 'brasil' || country =='BR' || country == 'Br' || country == 'br') {
                     resp.innerHTML += (`<p>Você é brasileiro</p>`) 
                 } else { resp.innerHTML += (`<p>Você é estrangeiro</p>`) }
 
