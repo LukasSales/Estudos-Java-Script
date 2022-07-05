@@ -28,10 +28,24 @@ h1, h2 {
 div#corpo1 {
     padding: 10px;
     align-items: center;
-    height: 72vh;
+    height: 80vh;
     margin: -2px -2px 20px -2px;
     border-radius: 20px;
     background-color: var(--cor04);
+    box-shadow: 2px 2px 4px 1px var(--cor03);
+    text-shadow: 2px 4px 1px var(--cor03);
+}
+
+div#res {
+    padding: 10px;
+    color: var(--cor02);
+    align-items: center;
+    text-align: center;
+    align-content: baseline;
+    height: 10vh;
+    margin: 30px 10px;
+    border-radius: 20px;
+    background-color: var(--cor03);
     box-shadow: 2px 2px 4px 1px var(--cor03);
     text-shadow: 2px 4px 1px var(--cor03);
 }

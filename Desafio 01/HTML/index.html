@@ -10,16 +10,20 @@
     <body>
         <div id="corpo1">
             <h1>One Piece</h1>
-            <h2>Qual a cena mais triste?</h2>
+            <h2>What is the saddest scene?</h2>
             <div id="opc">
                 <input id="clicou1" type="button" value="Death of Going Merry">
                 <input onmouseenter="entrou2()" onmouseout="saiu2()" onclick="clicou2()" class="clicou2" type="button" value="Death of Ace">
+            </div>
+            <div id="res">
             </div>
         </div>
         <script>
             var gm = window.document.querySelector ('input#clicou1')
 
             var ac = window.document.querySelector ('input.clicou2')
+
+            var res = window.document.querySelector('div#res')
 
             gm.addEventListener ('mouseenter', entrou)
 
@@ -57,13 +61,19 @@
 
             function clicou1() {
                     window.document.body.style.backgroundColor = ('black') 
-                    h1.innerHTML = 'Pow irmão tbm acho isso'
+                    res.innerHTML = ('Pow irmão tbm acho isso')
+                        res.style.transition = '0.9s'
+                        
             }
 
             function clicou2() {
                 if ('ac') {
                         window.document.body.style.backgroundColor = ('var(--cor05)')
-                        ac.innerHTML = 'Pow irmão tbm acho isso'
+                        res.innerHTML = ('Pow irmão tbm acho isso')
+                        res.style.transition = '0.9s'
+                        res.style.background = 'var(--cor01)'
+                        res.style.fontSize = '3.5vw'
+                        res.style.color = 'var(--cor02)'
                     }
             }
         </script>

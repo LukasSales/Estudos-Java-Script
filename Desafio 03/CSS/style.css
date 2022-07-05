@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #F23545;
+    --cor02: #463973;
+    --cor03: #382E59;
+    --cor04: #F23030;
+    --cor05: #8C2626;
+}
+
+* {
+    padding: 10px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(90deg, var(--cor05), var(--cor01));
+    text-align: center;
+}
+
+div#corpo {
+    margin-bottom: 15px;
+    background-color: var(--cor02);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 4px var(--cor03);
+    color: var(--cor04);
+    text-shadow: 1px 1px 1px black;
+}
+
+div#principal {
+    margin: 40px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    align-content: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+div#principal > input {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: var(--cor01);
+    color: var(--cor02);
+    font-weight: bold;
+    box-shadow: inset 1px 1px 2px 2px black;
+    align-items: center;
+}
+
+div#resp {
+    padding: 10px;
+}

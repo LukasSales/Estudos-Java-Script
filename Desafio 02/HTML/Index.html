@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="Viewport" content="Width=device-width, initial-scale=1.0">
+        <title>Desafio do voto</title>
+        <link rel="stylesheet" href="../CSS/style.CSS">
+    </head>
+    <body>
+        <div id="corpo">
+            <h1>Bem vindo</h1>
+        <h2>Deseja saber se você pode votar?</h2>
+            <div id="resp1">
+                <p>Qual é o seu nome?</p>
+                <input type="text" name="text1" id="text1">
+                <input type="button" id="button1" value="Enviar">
+                <p>Qual é a sua idade?</p> <input type="text" name="text2" id="text2"> <input type="button" name="button2" id="button2" value="Enviar">
+            </div>
+        </div>
+        <div id="resp"> </div>
+        <script>
+            var bt = window.document.getElementById ('button1')
+
+            bt.addEventListener ('click', clicou1)
+
+            var btt = window.document.querySelector ('input#button2')
+
+            btt.addEventListener ('click', clicou2)
+
+            function clicou1() {
+                var text1 = window.document.querySelector ('input#text1')
+                var resp = window.document.querySelector ('div#resp')
+
+                resp.innerHTML = `<p>Muito prazer em te conhecer, ${text1.value}!</p>`
+            }
+
+            function clicou2() {
+                var text2 = window.document.querySelector ('input#text2')
+                var idade = Number(text2.value)
+
+                if (idade <= 15) {
+                    resp.innerHTML += `<p>${text1.value}, você não pode votar!</p>`
+                } else if (idade < 18 || idade > 65) {
+                    resp.innerHTML += `<p>${text1.value}, o seu voto é facultativo!</p>`
+                } else {
+                    resp.innerHTML += `<p>${text1.value}, o seu voto é obrigatorio!</p>`
+                }
+            }
+        </script>
+    </body>
+</html>

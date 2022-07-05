@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+        <title>Desafio das horas</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+    <body>
+        <div id="corpo">
+            <h1>Bem vindo</h1>
+            <h2>Isso é um teste simples de condicionais</h2>
+            <div id="principal">
+                <p>Qual é o seu nome?</p>
+                <input type="text" name="text1" id="text1">
+                <input type="button" id="button1" value="Enviar">
+                <p style="margin-right:-12px ;">Que são horas agora?</p>
+                <input type="text" name="text2" id="text2">
+                <input type="button" id="button2" value="Enviar" onclick="clicou2()">
+            </div>
+        </div>
+        <div id="resp"></div>
+        <script>
+            var bt = window.document.querySelector ('input#button1')
+
+            bt.addEventListener ('click', clicou1)
+            bt.addEventListener ('mouseenter', entrou1) /* tirar o shadow inset */
+
+
+
+            function clicou1 () {
+                var nome = window.document.querySelector ('input#text1')
+                var resp = window.document.querySelector ('div#resp')
+
+                resp.innerHTML = `<p>Muito obrigado ${nome.value} por visitar esse teste!</p>`
+            }
+
+            function clicou2 () {
+                var nome = window.document.querySelector ('input#text1')
+                var text2 = window.document.querySelector ('input#text2')
+                var horas = Number(text2.value)
+                var resp = window.document.querySelector ('div#resp')
+
+                if (horas > 5 && horas < 12) {
+
+                    resp.innerHTML += `<p>Agora são ${horas} da manhã</p>`
+
+                } else if (horas >= 12 && horas < 18 ) {
+
+                    resp.innerHTML += `<p>Agora são ${horas} da tarde</p>`
+
+                } else if (horas > 17 && horas < 24) {
+
+                    resp.innerHTML += `<p>Agora são ${horas} da noite</p>`
+
+                } else if (horas >= 0 && horas < 6) {
+                    
+                    resp.innerHTML += `<p>Agora são ${horas} da madrugada</p>`
+                    resp.innerHTML += `<p>${nome.value}! o ideal seria ir dormir</p>`
+                    
+                } else if (horas >= 24) {
+
+                    resp.innerHTML += `<p>${nome.value}! essa hora não existe</p>`
+                    resp.innerHTML += `<p>${nome.value}! às horas vão de 00:00 até 23:59</p>`
+
+                }
+            }
+        </script>
+    </body>
+</html>
