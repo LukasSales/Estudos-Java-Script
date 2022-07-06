@@ -31,9 +31,10 @@
 
             function clicou1 () {
                 var nome = window.document.querySelector ('input#text1')
+                var name = String(nome.value)
                 var resp = window.document.querySelector ('div#resp')
 
-                resp.innerHTML = `<p>Muito obrigado ${nome.value} por visitar esse teste!</p>`
+                resp.innerHTML = `<p>Muito obrigado ${name} por visitar esse teste!</p>`
             }
 
             function clicou2 () {
