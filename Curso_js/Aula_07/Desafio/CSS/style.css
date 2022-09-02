@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.4em;
+}
+
+
+body {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(130, 129, 129);
+    color: white;
+}
+
+body > h1 {
+    font-weight: bold;
+}
+
+body > section {
+    line-height: 2em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 43%);
+}

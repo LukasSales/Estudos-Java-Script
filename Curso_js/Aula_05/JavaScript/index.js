@@ -1,0 +1,10 @@
+const nome = String(window.prompt("Qual é o seu nome completo? "));
+window.document.body.innerHTML += (`Seu nome é <strong>${nome}</strong> <br>`);
+window.document.body.innerHTML += (`Seu nome tem <strong>${nome.length}</strong> letras <br>`);
+window.document.body.innerHTML += (`A segunda letra do seu nome é: <strong>${nome[2]}</strong> <br>`);
+window.document.body.innerHTML += (`Qual o primeiro índice da letra C no seu nome? <strong>${nome.indexOf("c")}</strong> <br>`);
+window.document.body.innerHTML += (`Qual o último índice da letra C no seu nome? <strong>${nome.lastIndexOf("c")}</strong> <br>`);
+window.document.body.innerHTML += (`As 3 últimas letras do seu nome são: <strong>${nome.slice (-3, nome.length)}</strong><br>`);
+window.document.body.innerHTML += (`As palavras do seu nome são: <strong>${nome.split(" ")}</strong> <br>`);
+window.document.body.innerHTML += (`Seu nome com letras maiúsculas <strong>${nome.toUpperCase()}</strong> <br>`);
+window.document.body.innerHTML += (`Seu nome com letras minúsculas <strong>${nome.toLowerCase()}</strong> <br>`);
